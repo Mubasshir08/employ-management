@@ -30,16 +30,16 @@ function Dashboard() {
         <Graph />
         <h2 className="text-center text-lg mt-5">Overall</h2>
         <div className="grid grid-cols-2 px-3 mr-1 pt-2">
-          <div className="bg-neutral-100 rounded-2xl py-3 px-3 mt-3 ml-2">
-            Active From <span className="text-red-400 ml-16">August</span>
+          <div className="bg-neutral-100 rounded-2xl h-16 px-3 mt-3 ml-2 flex items-center justify-between">
+            Active From <span className="text-red-400 ">August</span>
           </div>
-          <div className="bg-neutral-100 rounded-2xl py-3 px-2 mt-3 ml-2">
+          <div className="bg-neutral-100 rounded-2xl h-16 mt-3 ml-2 flex items-center justify-evenly">
             Total Earning <span className="text-green-800 ml-1">200 BDT</span>
           </div>
-          <div className="bg-neutral-100 rounded-2xl py-3 px-3 mt-3 ml-2">
+          <div className="bg-neutral-100 rounded-2xl h-16 px-3 mt-3 ml-2 flex items-center justify-between">
             Total Leave <span className="text-red-400 ml-10">10</span>
           </div>
-          <div className="bg-neutral-100 rounded-2xl py-3 px-3 mt-3 ml-2">
+          <div className="bg-neutral-100 rounded-2xl h-16 px-3 mt-3 ml-2 flex items-center justify-between">
             Total Deduction <span className="text-red-400 ml-3">4</span>
           </div>
         </div>

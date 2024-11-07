@@ -1,10 +1,12 @@
 import React from 'react'
+import Stack from '@mui/material/Stack';
 import {Gauge, gaugeClasses} from '@mui/x-charts/Gauge'
 function Graph() {
   return (
     <section>
         <h3 className='text-lg text-center mt-6'>Performance</h3>
-        <Gauge
+          <Stack direction={{ xs: 'row', md: 'row' }} spacing={{ xs: 1, md: 3 }}>
+          <Gauge
                 value={75}
                 startAngle={0}
                 endAngle={360}
@@ -17,6 +19,8 @@ function Graph() {
                     }
                   })}
         />
+       
+          </Stack>
     </section>
   )
 }
