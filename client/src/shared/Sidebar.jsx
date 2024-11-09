@@ -1,7 +1,10 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 function Sidebar({ showSidebar, setShowSidebar }) {
+  const location = useLocation();
+  const isAdminPage = location.pathname === '/admin'; // Check if on Admin page
+
   return (
     <>
       <div
@@ -16,14 +19,14 @@ function Sidebar({ showSidebar, setShowSidebar }) {
           x
         </button>
         <ul className="mt-10 ml-6 text-center">
-          <li className='py-3'>
-          <Link to="/" onClick={() => setShowSidebar(false)}>
+          <li className="py-3">
+            <Link to="/" onClick={() => setShowSidebar(false)}>
               Home
             </Link>
           </li>
-          <li className='-ml-2.5'>
-            <Link to="/dashboard" onClick={() => setShowSidebar(false)}>
-              Dashboard
+          <li className="-ml-2.5">
+            <Link to={isAdminPage ? "/employees" : "/dashboard"} onClick={() => setShowSidebar(false)}>
+              {isAdminPage ? "Employees" : "Dashboard"}
             </Link>
           </li>
         </ul>
