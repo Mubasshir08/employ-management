@@ -3,6 +3,7 @@ import './App.css';
 import Navbar from './shared/Navbar';
 import Dashboard from './pages/Dashboard';  // Import the Dashboard component
 import Home from './pages/Home';
+import Login from './pages/login';
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home/>}/>
         <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/login" element={<Login />} />
       </Routes>
     </Router>
   );
